@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <title>Jespen - Butikk</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- BOOTSTRAP: Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- BOOTSTRAP: Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Lokal CSS -->
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+	<div id="wrapper">
+	
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Bytt navigasjon</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="."><img class="hidden-sm" src="logo-lg.png" alt="Til forsiden"/><img class="hidden-xs hidden-md hidden-lg" src="logo-sm.png" alt="Til forsiden"/></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+				  <ul class="nav navbar-nav">
+					<li><a href=".">Hjem</a></li>
+					<li><a href="musikk">Musikk</a></li>
+					<li><a href="fansida">Fanblogg</a></li>
+					<li><a href="bilder">Bilder</a></li>
+					<li><a href="nyheter">Nyheter</a></li>
+					<li><a href="konserter">Konserter</a></li>
+					<li><a href="om">Om Jespen</a></li>
+					<li class="active"><a href="butikk"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;Butikk</a></li>
+				  </ul>
+				  <ul class="nav navbar-nav navbar-right">
+					<li><a href="" title="Vis handlekurv"><img id="cart" src="cart-24.png" title="Handlekurv" alt="Handlekurv"/></a></li>
+				  </ul>
+				</div>
+			</div>
+		</nav>
+	 
+		<div class="container">
+			<div class="box-light-bottom" id="butikk-container">
+			
+				<div id="butikk-nav">
+					<ul>
+						<li data-class="klar" class="active">Klær</li>
+						<li data-class="musikk">Musikk</li>
+						<li data-class="tilbehor">Tilbehør</li>
+					</ul>
+				</div> 	
+				<div id="butikk-klar-nav">
+					<span class="nowrap"><input name="klar-kategori" data-class="t-skjorte genser sokker" type="radio" id="alle" value="alle" checked><label for="alle">Alle</label></span>
+					<span class="nowrap"><input name="klar-kategori" data-class="t-skjorte" type="radio" id="t-skjorte" value="t-skjorte"><label for="t-skjorte">T-skjorter</label></span>
+					<span class="nowrap"><input name="klar-kategori" data-class="genser" type="radio" id="genser" value="genser"><label for="genser">Gensere</label></span>
+					<span class="nowrap"><input name="klar-kategori" data-class="sikker" type="radio" id="sokker" value="sokker"><label for="sokker">Sokker</label></span>
+				</div>
+				
+				<div id="butikk">
+					<ul>
+						<li id="item-1" class="klar t-skjorte">
+							<img src="pic/bla_t-skjorte.JPG" class="item" alt />
+							<h4 class="item-name">Jespen T-skjorte - Blå</h4>
+							<p class="item-info">
+								Blå t-skjorte i bomullstrikot med rund hals og Jespen-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p>
+							<p class="price">kr 199,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv" alt="handlekurv" />
+							</p>
+						</li>
+						<li id="item-2" class="klar t-skjorte">
+							<img src="pic/lilla_t-skjorte.JPG" class="item" alt />
+							<h4 class="item-name">Jespen T-skjorte - Lilla</h4>
+							<p class="item-info">
+								Lilla t-skjorte i bomullstrikot med rund hals og Jespen-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p> 
+							<p class="price">kr 199,-</p>
+							<div class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</div>
+						</li>
+						<li id="item-3" class="klar t-skjorte">
+							<img src="pic/rod_t-skjorte.JPG" class="item" alt />
+							<h4 class="item-name">Jespen T-skjorte - Rød</h4>
+							<p class="item-info">
+								Rød t-skjorte i bomullstrikot med rund hals og Jespen-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p> 
+							<p class="price">kr 199,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-4" class="klar t-skjorte">
+							<img src="pic/gronn_t-skjorte.JPG" class="item" alt />
+							<h4 class="item-name">Jespen T-skjorte - Grønn</h4>
+							<p class="item-info">
+								Grønn t-skjorte i bomullstrikot med rund hals og Jespen-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p> 
+							<p class="price">kr 199,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-5" class="klar t-skjorte">
+							<img src="pic/svart_t-skjorte.JPG" class="item" alt />
+							<h4 class="item-name">Jespen T-skjorte - Svart</h4>
+							<p class="item-info">
+								Svart t-skjorte i bomullstrikot med rund hals og Jespen-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p> 
+							<p class="price">kr 199,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-6" class="klar t-skjorte">
+							<img src="pic/bla_t-skjorte_sprengkul.JPG" class="item" alt />
+							<h4 class="item-name">Sprængkul T-skjorte - Blå</h4>
+							<p class="item-info">
+								Blå t-skjorte i bomullstrikot med rund hals og Sprængkul-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p> 
+							<p class="price">kr 199,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-7" class="klar t-skjorte">
+							<img src="pic/rod_t-skjorte_sprengkul.JPG" class="item" alt />
+							<h4 class="item-name">Sprængkul T-skjorte - Rød</h4>
+							<p class="item-info">
+								Rød t-skjorte i bomullstrikot med rund hals og Sprængkul-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p> 
+							<p class="price">kr 199,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-8" class="klar t-skjorte">
+							<img src="pic/gronn_t-skjorte_sprengkul.JPG" class="item" alt />
+							<h4 class="item-name">Sprængkul T-skjorte - Grønn</h4>
+							<p class="item-info">
+								Grønn t-skjorte i bomullstrikot med rund hals og Sprængkul-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p> 
+							<p class="price">kr 199,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-9" class="klar t-skjorte">
+							<img src="pic/svart_t-skjorte_sprengkul.JPG" class="item" alt />
+							<h4 class="item-name">Sprængkul T-skjorte - Svart</h4>
+							<p class="item-info">
+								Svart t-skjorte i bomullstrikot med rund hals og Sprængkul-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p> 
+							<p class="price">kr 199,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-10" class="klar t-skjorte">
+							<img src="pic/lilla_t-skjorte_sprengkul.JPG" class="item" alt />
+							<h4 class="item-name">Sprængkul T-skjorte - Lilla</h4>
+							<p class="item-info">
+								Lilla t-skjorte i bomullstrikot med rund hals og Sprængkul-trykk. 90% bomull, 10% viskose.<br/>
+								Maskinvask 40˚</p> 
+							<p class="price">kr 199,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>
+						<li id="item-11" class="klar genser">
+							<img src="pic/lilla_genser.JPG" class="item" alt />
+							<h4 class="item-name">Lilla genser</h4>
+							<p class="item-info">
+								Lilla genser i bomullstrikot med Jespen-trykk. 
+								100% bomull. Maskinvask 40˚</p> 
+							<p class="price">kr 249,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>
+						<li id="item-12" class="klar genser">
+							<img src="pic/rod_genser.JPG" class="item" alt />
+							<h4 class="item-name">Rød genser</h4>
+							<p class="item-info">
+								Rød genser i bomullstrikot med Jespen-trykk. 
+								100% bomull. Maskinvask 40˚</p> 
+							<p class="price">kr 249,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-13" class="klar genser">
+							<img src="pic/gronn_genser.JPG" class="item" alt />
+							<h4 class="item-name">Grønn genser</h4>
+							<p class="item-info">
+								Grønn genser i bomullstrikot med Jespen-trykk. 
+								100% bomull. Maskinvask 40˚</p> 
+							<p class="price">kr 249,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-14" class="klar genser">
+							<img src="pic/svart_genser.JPG" class="item" alt />
+							<h4 class="item-name">Svart genser</h4>
+							<p class="item-info">
+								Svart genser i bomullstrikot med Jespen-trykk. 
+								100% bomull. Maskinvask 40˚</p> 
+							<p class="price">kr 249,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-15" class="klar genser">
+							<img src="pic/lilla_hettegenser.JPG" class="item" alt />
+							<h4 class="item-name">Lilla hettegenser</h4>
+							<p class="item-info">
+								Lilla hettegenser med Jespen-trykk. 60% bomull, 40% polyester. Maskinvask 40˚</p> 
+							<p class="price">kr 299,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-16" class="klar genser">
+							<img src="pic/rod_hettegenser.JPG" class="item" alt />
+							<h4 class="item-name">Rød hettegenser</h4>
+							<p class="item-info">
+								Rød hettegenser med Jespen-trykk. 60% bomull, 40% polyester. Maskinvask 40˚</p> 
+							<p class="price">kr 299,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-17" class="klar genser">
+							<img src="pic/gronn_hettegenser.JPG" class="item" alt />
+							<h4 class="item-name">Grønn hettegenser</h4>
+							<p class="item-info">
+								Grønn hettegenser med Jespen-trykk. 60% bomull, 40% polyester. Maskinvask 40˚</p> 
+							<p class="price">kr 299,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-18" class="klar genser">
+							<img src="pic/svart_hettegenser.JPG" class="item" alt />
+							<h4 class="item-name">Svart hettegenser</h4>
+							<p class="item-info">
+								Svart hettegenser med Jespen-trykk. 60% bomull, 40% polyester. Maskinvask 40˚</p> 
+							<p class="price">kr 299,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="XS" selected>XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>						
+									<option value="L">L</option>						
+									<option value="XL">XL</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>
+						<li id="item-50" class="klar sokker">
+							<img src="pic/svarte_hoye_sokker.JPG" class="item" alt />
+							<h4 class="item-name">Sorte høye sokker</h4>
+							<p class="item-info">
+								Svarte, høye, finstrikkede sokker med Jespen-trykk.  
+								68% bomull, 30% polyamid, 2% elastan. Maskinvask 40˚</p> 
+							<p class="price">kr 69,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="36" selected>36</option>
+									<option value="37">37</option>
+									<option value="38">38</option>						
+									<option value="39">39</option>						
+									<option value="40">40</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>
+						<li id="item-51" class="klar sokker">
+							<img src="pic/hvite_lave_sokker.JPG" class="item" alt />
+							<h4 class="item-name">Hvite lave sokker</h4>
+							<p class="item-info">
+								Hvite, lave, finstrikkede sokker i myk bomullsblanding med Jespen-trykk. 
+								76% bomull, 22% polyamid, 2% elastan. Maskinvask 40˚</p> 
+							<p class="price">kr 49,-</p>
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="36" selected>36</option>
+									<option value="37">37</option>
+									<option value="38">38</option>						
+									<option value="39">39</option>						
+									<option value="40">40</option>	
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-101" class="musikk">
+							<img src="music-note.JPG" class="item" alt />
+							<h4 class="item-name">SPRÆNGKUL (Album)</h4>
+							<p class="item-info">
+								Last ned Jespen sitt nye album «SprængKul» til din mobil.</p> 
+							<p class="price">kr 149,-
+							<p class="item-input">
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-102" class="musikk">
+							<img src="music-note.JPG" class="item" alt />
+							<h4 class="item-name">HER KJÆM Æ! (Album)</h4>
+							<p class="item-info">
+								Last ned Jespen sitt album «HER KJÆM Æ!» til din mobil.</p> 
+							<p class="price">kr 99,-
+							<p class="item-input">
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-103" class="musikk">
+							<img src="music-note.JPG" class="item" alt />
+							<h4 class="item-name">Hvorfor må æ ring dæ?</h4>
+							<p class="item-info">
+								Last ned Jespen sin nyeste låt, «Hvorfor må æ ring dæ?»</p> 
+							<p class="price">kr 39,-
+							<p class="item-input">
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-201" class="tilbehor">
+							<img src="pic/smykke.JPG" class="item" alt />
+							<h4 class="item-name">Jespen Smykke</h4>
+							<p class="item-info">
+								Jespen-smykket har rundt anheng og kjede av smal lenke. Regulerbar lengde, 43-50 cm. 
+								100% metall</p> 
+							<p class="price">kr 129,-
+							<p class="item-input">
+								<select title="One Size">
+									<option value="XS" selected>One Size</option>
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-202" class="tilbehor">
+							<img src="pic/lilla_armband.JPG" class="item" alt />
+							<h4 class="item-name">Jespen armbånd</h4>
+							<p class="item-info">
+								2pk. Jespen-armbånd til deg og din beste venn. 
+								100% silikon (allergifritt)</p> 
+							<p class="price">kr 79,-
+							<p class="item-input">
+								<select title="Størrelse">
+									<option value="S">S</option>
+									<option value="M" selected>M</option>						
+									<option value="L">L</option>						
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>				
+						<li id="item-203" class="tilbehor">
+							<img src="pic/iphone6_deksel.JPG" class="item" alt />
+							<h4 class="item-name">Jespen mobildeksel</h4>
+							<p class="item-info">
+								Kult Jespen-deksel til din iPhone. Beskytter mot riper og støt. 
+								Tynt og fleksibelt TPU-materiale</p> 
+							<p class="price">kr 69,-
+							<p class="item-input">
+								<select title="Velg telefon">
+									<option value="iPhone6">iPhone6</option>
+									<option value="iPhone6">iPhone6s</option>
+									<option value="iPhone7" selected>iPhone7</option>						
+									<option value="iPhone7s">iPhone7s</option>						
+								</select>
+								<input type="number" step="1" value="1" min="1" max="10" title="Antall" />
+								<img src="cart-24.png" title="Legg i handlekurv"  alt="handlekurv" />
+							</p>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<!-- .container-fluid -->
+		
+		<!-- For å sette av plass til footer -->
+		<div id="push"></div>
+	</div>
+	<!-- #Wrapper -->
+	
+	<!-- Fast footer -->
+	<footer id="footer">
+		<div id="info"><a href="."><img src="logo-sm.png" alt="Til forsiden">Jespen Popstjærne</a></div>
+		<div id="credits">&copy;2017 Malin Øvrebø<br/> Per Olav Mariussen</div>
+		<div id="social-media">
+			<a href="https://spotify.com" target="_blank" title="Jespen på Spotify"><img src="spotify.png" alt="Lenke til Spotify"></a>
+			<a href="https://tidal.com" target="_blank" title="Jespen på Tidal"><img src="tidal.png" alt="Lenke til Tidal"></a>
+			<a href="https://youtube.com" target="_blank" title="Jespen på YouTube"><img src="youtube.png" alt="Lenke til YouTube"></a>
+			<a href="https://facebook.com"  target="_blank" title="Jespen på Facebook"><img src="facebook.png" alt="Lenke til Facebook"></a>
+			<a href="https://twitter.com/jespenpop" target="_blank" title="Jespen på Twitter"><img src="twitter.png" alt="Lenke til Twitter"></a>
+		</div>
+	</footer>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- BOOTSTRAP: Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<!-- Lokalt Javascript -->
+	<script src="jespen.js"></script>
+	<script>
+	/* Init av siden */
+	$(function(){
+		pageInit();
+		butikkInit();
+	});
+	</script>
+	
+</body>
+</html>

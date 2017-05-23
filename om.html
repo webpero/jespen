@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <title>Jespen - Om</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- BOOTSTRAP: Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- BOOTSTRAP: Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Lokal CSS -->
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+	<div id="wrapper">
+	
+	  <!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Bytt navigasjon</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="."><img class="hidden-sm" src="logo-lg.png" alt="Til forsiden"/><img class="hidden-xs hidden-md hidden-lg" src="logo-sm.png" alt="Til forsiden"/></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+				  <ul class="nav navbar-nav">
+					<li><a href=".">Hjem</a></li>
+					<li><a href="musikk">Musikk</a></li>
+					<li><a href="fansida">Fanblogg</a></li>
+					<li><a href="bilder">Bilder</a></li>
+					<li><a href="nyheter">Nyheter</a></li>
+					<li><a href="konserter">Konserter</a></li>
+					<li class="active"><a href="om"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>&nbsp;Om Jespen</a></li>
+					<li><a href="butikk">Butikk</a></li>
+				  </ul>
+				  <ul class="nav navbar-nav navbar-right">
+					<li><a href="" title="Vis handlekurven"><img id="cart" src="cart-24.png" alt="Handlekurv"/></a></li>
+				  </ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="box-light-bottom" id="om">
+			
+				<section>
+					<header>
+						<h2><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>OM JESPEN<a href="#navn" class="headinglink">Kontaktskjema for booking</a></h2>
+					</header>
+					<article>
+						<h3>Hvem er Jespen?</h3>
+						<p><img src="pic/jespen3.jpg" alt="Jespen på modelloppdrag" />
+						Jespen Popstjærne er født og oppvokst på Fenes i Bodø kommune. Hans fulle navn er Fred Jespen Larsen, men går under artistnavnet Jespen Popstjærne, eller oftest bare Jespen.</p>
+						<p><img src="pic/jespen1.jpg" alt="Jespen hjemme på Fenes"/>
+						Jespen kom til verden i 1996 og er den yngste av tre gutter i familien Larsen. Verken foreldrene eller brødrene til Jespen driver med musikk, men Jespen fikk interesse for dette i tenårene. Han startet på gutterommet da han var 15 år med å lære seg å spille gitar og begynte etter hvert å legge tekst til gitarklimpringen. Han opptrådte på UKM i Bodø i 2013 med låta «Forælska!», som senere har blitt en stor favoritt blant fansen og som er med på hans nyeste album, SprængKul, fra april i år.</p>
+						<p><img src="pic/jespen4.jpg"  alt="Jespen i solnedgang hjemme på Fenes" />
+						På UKM skilte Jespen seg ut med den fengende låta sunget på dialekt, og han ble etter opptredenen intervjuet av Avisa Nordland, et intervju som gjorde han kjent i Bodø. I senere tid har Jespen fortalt at deltagelsen i UKM var hans gjennombrudd. Han holdt etter dette flere konserter i Stormen Konserthus i Bodø, hvor han for det meste framførte covrede låter. Det skulle derimot gå tre år fra gjennombruddet til Jespen ga ut sitt første album, «HER KJÆM Æ!», med egenkomponerte låter. Albumet ble gitt ut i juni 2016.</p>
+						<p><img src="pic/jespen6.jpg" alt="Jespen synger Hær kjæm Æ! live" />
+						<a href="https://twitter.com/jespenpop" style="float:right"><img src="twitter.png" height="20" alt="Lenke til Twitter" />Følg Jespen på twitter!</a></p>
+					</article>
+				</section>
+				
+				<section id="kontaktskjema">
+					<header>
+						<h2>KONTAKTSKJEMA FOR BOOKING</h2>	
+						<h4>Interessert i å booke Jespen Popstjerne? Send en forespørsel til Jespens manager.</h4> 
+						<p>Fyll ut skjemaet under og inkluder i meldingen dato og type arrangement. <span class="paakrevd">*</span> = Påkrevd felt</p>
+					</header>
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="navn" class="col-sm-2 control-label"><span class="paakrevd">*</span> Navn</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="navn" name="navn" placeholder="Fullt navn" value="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="epost" class="col-sm-2 control-label"><span class="paakrevd">*</span> E-post</label>
+							<div class="col-sm-10">
+								<input type="email" class="form-control" id="epost" name="epost" placeholder="eksempel@online.no" value="">
+							</div>
+						</div>
+								<div class="form-group">
+							<label for="telefon" class="col-sm-2 control-label"><span class="paakrevd">*</span> Telefon</label>
+							<div class="col-sm-10">
+								<input type="tel" class="form-control" id="telefon" name="telefon" placeholder="+47xxxxxxxx" value="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="message" class="col-sm-2 control-label"><span class="paakrevd">*</span> Melding</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" rows="4" id="message" name="message" placeholder="Skriv inn din melding her"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-10 col-sm-offset-2">
+								<input id="submit" name="submit" type="submit" value="Send inn" class="btn btn-primary">
+							</div>
+						</div>
+						</form>
+				</section>
+
+			</div>
+		</div>
+		<!-- .container-fluid -->
+		
+		<!-- For å sette av plass til footer -->
+		<div id="push"></div>
+	</div>
+	<!-- #Wrapper -->
+	
+	<!-- Fast footer -->
+	<footer id="footer">
+		<div id="info"><a href="."><img src="logo-sm.png" alt="Til forsiden">Jespen Popstjærne</a></div>
+		<div id="credits">&copy;2017 Malin Øvrebø<br/> Per Olav Mariussen</div>
+		<div id="social-media">
+			<a href="https://spotify.com" target="_blank" title="Jespen på Spotify"><img src="spotify.png" alt="Lenke til Spotify"></a>
+			<a href="https://tidal.com" target="_blank" title="Jespen på Tidal"><img src="tidal.png" alt="Lenke til Tidal"></a>
+			<a href="https://youtube.com" target="_blank" title="Jespen på YouTube"><img src="youtube.png" alt="Lenke til YouTube"></a>
+			<a href="https://facebook.com"  target="_blank" title="Jespen på Facebook"><img src="facebook.png" alt="Lenke til Facebook"></a>
+			<a href="https://twitter.com/jespenpop" target="_blank" title="Jespen på Twitter"><img src="twitter.png" alt="Lenke til Twitter"></a>
+		</div>
+	</footer>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- BOOTSTRAP: Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<!-- Lokalt Javascript -->
+	<script src="jespen.js"></script>
+	<script>
+	/* Init av siden */
+	$(function(){
+		pageInit();
+	});
+	</script>
+
+</body>
+</html>

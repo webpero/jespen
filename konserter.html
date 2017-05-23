@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <title>Jespen - Konserter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- BOOTSTRAP: Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- BOOTSTRAP: Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Lokal CSS -->
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+	<div id="wrapper">
+	
+	   <!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Bytt navigasjon</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="."><img class="hidden-sm" src="logo-lg.png" alt="Til forsiden"/><img class="hidden-xs hidden-md hidden-lg" src="logo-sm.png" alt="Til forsiden"/></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+				  <ul class="nav navbar-nav">
+					<li><a href=".">Hjem</a></li>
+					<li><a href="musikk">Musikk</a></li>
+					<li><a href="fansida">Fanblogg</a></li>
+					<li><a href="bilder">Bilder</a></li>
+					<li><a href="nyheter">Nyheter</a></li>
+					<li class="active"><a href="konserter"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;Konserter</a></li>
+					<li><a href="om">Om Jespen</a></li>
+					<li><a href="butikk">Butikk</a></li>
+				  </ul>
+				  <ul class="nav navbar-nav navbar-right">
+					<li><a href="" title="Vis handlekurv"><img id="cart" src="cart-24.png" alt="Handlekurv"/></a></li>
+				  </ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row box-light-bottom" id="konsertarkiv">
+			
+				<div class="col-sm-7">
+					<header>
+						<h2><span class="glyphicon glyphicon-music" aria-hidden="true"></span>HÆR KAN DU SE OG HØR MÆ</h2>
+					</header>
+					
+					<table id="konsert-liste" class="table dato-liste">
+						<tr><td>01.05</td><td>ORKANGER</td><td>Orkanger Samfunshus</td><td><a href="">Billetter</a></td></tr>
+						<tr><td>11.05</td><td>SNÅSA</td><td>Snåsakjellern</td><td><a href="">Billetter</a></td>
+						<tr><td>12.05</td><td>MO I RANA</td><td>Go' på Mo</td><td><a href="">Billetter</a></td>
+						<tr><td>16.05</td><td>ALTA</td><td>Lokalet</td><td><a href="">Billetter</a></td>
+						<tr><td>19.05</td><td>PORSANGER</td><td>Ravina</td><td><a href="">Billetter</a></td>
+						<tr><td>21.06</td><td>BERGEN</td><td>Torget</td><td><a href="">Billetter</a></td>
+						<tr><td>23.05</td><td>OSLO</td><td>Sentrum Scene</td><td><a href="">Billetter</a></td>
+						<tr><td>01.06</td><td>TRONDHJEM</td><td>FÆSTIVALN - Samfundet</td><td><a href="">Billetter</a></td>
+					</table>
+				</div>
+				
+				<div class="col-sm-5">
+					<img src="pic/concert.jpg" class="albumbilde" alt="Konsertbilde" />
+				</div>
+				
+			</div>
+		</div>
+		<!-- .container-fluid -->
+		
+		<!-- For å sette av plass til footer -->
+		<div id="push"></div>
+	</div>
+	<!-- #Wrapper -->
+	
+	<!-- Fast footer -->
+	<footer id="footer">
+		<div id="info"><a href="."><img src="logo-sm.png" alt="Til forsiden">Jespen Popstjærne</a></div>
+		<div id="credits">&copy;2017 Malin Øvrebø<br/> Per Olav Mariussen</div>
+		<div id="social-media">
+			<a href="https://spotify.com" target="_blank" title="Jespen på Spotify"><img src="spotify.png" alt="Lenke til Spotify"></a>
+			<a href="https://tidal.com" target="_blank" title="Jespen på Tidal"><img src="tidal.png" alt="Lenke til Tidal"></a>
+			<a href="https://youtube.com" target="_blank" title="Jespen på YouTube"><img src="youtube.png" alt="Lenke til YouTube"></a>
+			<a href="https://facebook.com"  target="_blank" title="Jespen på Facebook"><img src="facebook.png" alt="Lenke til Facebook"></a>
+			<a href="https://twitter.com/jespenpop" target="_blank" title="Jespen på Twitter"><img src="twitter.png" alt="Lenke til Twitter"></a>
+		</div>
+	</footer>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- BOOTSTRAP: Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<!-- Lokalt Javascript -->
+	<script src="jespen.js"></script>
+	<script>
+	/* Init av siden */
+	$(function(){
+		pageInit();
+	});
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,771 @@
+﻿/* Jespen Postjærne
+ * Oppgave i Webdesign NTNU V2017
+ * (c) 2017 Malin Øvrebø og Per Olav Mariussen
+ */
+
+/* For sjekk fra JS om vi har bare én kolonne */
+.oneCol {float:left;}
+@media (min-width: 768px){
+	.oneCol {float:none;}
+}
+
+/* MAIN-content wrapper: Full skjermhøyde, fast navbar på 60px og fast footer på 60px */
+html, body {
+    height: 100%;
+}
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+	margin: 0px auto -60px;
+}
+#push {
+	height: 60px;
+}
+#footer {
+	border-top: 1px solid rgb(231,231,231);
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,.15), 0 -1px 5px rgba(0,0,0,.075);
+	background: linear-gradient( #f8f8f8, #e0e0e0 );
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	height: 60px;
+	z-index: 100;
+}
+#info {
+	margin-left: 15px;
+	margin-top: 20px;
+	float: left;
+}
+#info a {
+	color: #333;
+}
+#info img {
+	margin-top: -7px;
+	height: 28px;
+}
+#social-media {
+	display: table;
+	margin: auto;
+}
+#social-media img {
+	margin: 20px 5px 0;
+	height: 20px;
+}
+#credits {
+	margin-top: 10px;
+	margin-right: 15px;
+	float: right;
+	text-align: right;
+	display: none;
+}
+@media (min-width: 768px) {
+	#social-media img {
+		margin: 16px 10px 0;
+		height: 28px;
+	}
+}
+@media (min-width: 550px) {
+	#info {
+		font-size: 120%;
+	}
+	#credits {
+		display: inline-block;
+	}
+}
+.container-fluid {
+	margin-top: 60px;	/* Innhold starte etter menyen (høyde 60px) */
+}
+
+/* Overstyring av H-tager og DIV-tager i Boostrap */
+h2, h3 {
+	margin-top: 15px;
+}
+header > h4 {
+	font-size: 100%;
+	color: #000;
+	text-shadow: 0 0 5px #fff;  /* For å sikre synlighet mot mørk bakgrunn */
+}
+header > h4 > a {
+	color: #000;
+	text-shadow: 0 0 5px #fff;  /* For å sikre synlighet mot mørk bakgrunn */
+}
+header .glyphicon {
+	font-size: 90%;
+	padding: 5px;
+	margin-right: 10px;
+	color: white;
+	background: radial-gradient(#80397b,#b428aa);
+	border-radius: 3px;
+}
+img {
+	border-radius: 3px;
+}
+.headinglink {
+	margin-left: 30px;
+	font-size: 65%;
+	padding-top: 14px;
+}
+.row:not(:last-child) {
+	margin-bottom: 20px;
+}
+section:not(:last-child) {
+	margin-bottom: 40px;
+}
+.uthev {
+	color: #80397b;
+	font-weight: bold;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.paakrevd {
+	font-weight: bold;
+	font-size: 150%;
+	color: #80397b;
+}
+
+/* Overstyring av standard Boostrap Navbar */
+.navbar-brand img {
+	margin-top: -7px;
+	height: 30px;		/* Større logo enn Bootstrap standard (16) */
+}
+.navbar-default .navbar-nav>li>a {
+    color: #555;	/* Endret fra #777 som gir for dårlig kontrast */
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.open>a {
+	color: white;
+	font-weight: bold;
+	background: linear-gradient(#80397b,#b32daa);
+}
+.navbar-default .navbar-nav a:hover, 
+.navbar-default .navbar-nav a:hover {
+	color: white!important;
+	font-weight: bold;
+	background: linear-gradient(to bottom right,rgba(128,57,123,0.6),rgba(179,45,170,0.6));
+}
+/* Menyen blir for lang på medium skjermer, kutter padding */
+@media (min-width: 768px) {
+	.navbar-default .navbar-nav a {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+@media (min-width: 992px) {
+	.navbar-default .navbar-nav a {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+#cart {
+	margin-top: -4px;	/* Posisjonering av handlekurv */
+}
+
+/* Bokser - Skal bare legges på elementer inne i .col-* eller på .row */
+.box-dark {
+	background: #707070;
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-dark-bottom {
+	background: linear-gradient( #f9f9f9, #888 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-dark-top {
+	background: linear-gradient( #888, #f9f9f9 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-dark-top-left {
+	background: linear-gradient( to top left, #f9f9f9, #888 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-dark-top-right {
+	background: linear-gradient( to top right, #f9f9f9, #888 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-dark-bottom-left {
+	background: linear-gradient( to bottom left, #f9f9f9, #888 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-dark-bottom-right {
+	background: linear-gradient( to bottom right, #f9f9f9, #888 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-light {
+	background: #fcfcfc;
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-light-bottom {
+	background: linear-gradient( #e0e0e0, #f9f9f9 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-light-top {
+	background: linear-gradient( #f9f9f9, #e0e0e0 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-light-top-left {
+	background: linear-gradient( to top left, #e0e0e0, #f9f9f9 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-light-top-right {
+	background: linear-gradient( to top right, #e0e0e0, #f9f9f9 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-light-bottom-left {
+	background: linear-gradient( to bottom left, #e0e0e0, #f9f9f9 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+.box-light-bottom-right {
+	background: linear-gradient( to bottom right, #e0e0e0, #f9f9f9 );
+	border-radius: 5px;
+	padding: 1px 10px;
+}
+
+/* Karusellen - Slick for jQuery */
+.slick-prev {
+	left: 5px;
+}
+.slick-next {
+	right: 5px;
+}
+.slick-dots {
+	bottom: 5px;
+}
+.slick-slide {
+	width: 100%;
+	height: 220px!important;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+	.slick-slide {
+		height: 300px!important;
+	}
+}
+@media (min-width: 992px) {
+	.slick-slide {
+		height: 350px!important;
+	}
+}
+@media (min-width: 1600px) {
+	.slick-slide {
+		height: 450px!important;
+	}
+}
+.slick-slide img {
+	width: 100%;
+}
+#slider {
+	z-index: 0;
+	padding: 20px 30px 30px;
+}
+#slider img {
+	border-radius: 5px;
+}
+#velkommen {	
+	position: absolute;		/* Posisjoneres med javascript */
+	z-index: 1;
+	color: #333;
+	font-family: 'Rock Salt', cursive;
+	font-size: 1em;
+	background: radial-gradient( rgba(240,240,240,0.9), rgba(240,240,240,0.2) );
+	border-radius: 30px;
+}
+#velkommen h1 {
+	margin-top: 10px;
+	font-size: 1.5em;
+	text-align: center;
+}
+#velkommen p {
+	text-align: center;
+}
+@media (min-width: 768px) {
+	#velkommen {
+	font-size: 1.2em;
+	border-radius: 40px;
+	padding: 5px;	
+}
+	#velkommen h1 {
+	font-size: 1.6em;
+	}
+}
+@media (min-width: 992px) {
+	#velkommen {
+		font-size: 1.4em;
+		border-radius: 60px;
+		padding: 10px;	
+	}
+	#velkommen h1 {
+	margin-top: 20px;
+	font-size: 1.8em;
+	}
+}
+
+/* Audio og Video */
+#music-container h4 .glyphicon {	/* For at musikk-knapper skal vises som vanlig tekst her */
+	color: #000;
+	background: none;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+}
+#player {
+	width: 100%;
+	height: 230px;
+	background: url('pic/jespen9.jpg') center no-repeat #eee;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+#video-container {      /* På musikk-siden*/
+	padding: 15px;
+	background: rgba(255,255,255,0.8);
+	border-radius: 5px;
+	display: none;
+}
+#video-window {			/* På forsiden, posisjonerers midt på skjermen */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 95%;
+	max-width: 800px;
+	z-index: 1050; /* Høyere enn navbar og footer */
+	display: none;
+	background: rgba(200,200,200,0.95);
+	box-shadow: rgba(100,100,100,0.8) 5px 5px 10px;
+	border: 2px #ddd solid;
+	border-radius: 5px;
+	padding: 15px;
+}
+#video-window button.lukk {
+	float: right;
+	margin-top: -10px;
+}
+#video-player {
+	width: 100%;
+	height: 200px;
+    display: table;
+    margin: auto;
+}
+#audio-container {
+	height: 40px;
+	margin-top: 10px;
+	border-radius: 5px;
+	display: none;
+}
+#audio-container.musikk {
+	height: 230px;
+	padding: 15px;
+	background: rgba(255,255,255,0.8);
+	display: none;
+}
+.musikk audio {
+	height: 200px;
+}
+audio {
+	width: 100%;
+}
+/* Høyden på playere må tilpasses etter skjembredden */
+@media (min-width: 550px) {
+	#player {
+		height: 280px;
+	}
+	#video-player {
+		height: 250px;
+	}
+	#audio-container.musikk {
+		height: 280px;
+	}
+	.musikk audio {
+		height: 250px;
+	}
+}
+@media (min-width: 992px) {
+	#player {
+		height: 330px;
+	}
+	#video-player {
+		height: 300px;
+	}
+	#audio-container.musikk {
+		height: 330px;
+	}
+	.musikk audio {
+		height: 300px;
+	}
+}
+@media (min-width: 1600px) {
+	#player {
+		height: 430px;
+	}
+	#video-player {
+		height: 400px;
+	}
+	#audio-container.musikk {
+		height: 430px;
+	}
+	.musikk audio {
+		height: 400px;
+	}
+}
+
+/* Siste på Jespenpop */
+#liste-publisert {
+}
+#filter-siste input {
+	cursor: pointer;
+}
+#filter-siste label {
+	margin-right: 5px;
+	cursor: pointer;
+}
+#filter-siste span {
+	white-space: nowrap;
+	cursor: pointer;
+}
+#filter-siste .glyphicon {
+	padding: 2px;
+	margin: 5px;
+}
+.menyvalg {		/* Utheving av referanser til valg i hovedmenyen */
+	font-weight: bold;
+	color: black;
+}
+
+/* Spillelister */
+.musikk-liste .glyphicon {
+	padding: 5px;
+	margin: 1px;
+}
+.musikk-liste .active {
+	font-weight: bold!important;
+	color: white;
+	background: linear-gradient(#80397b,#b32daa);
+	border-radius: 3px;
+}
+.musikk-liste {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.musikk-liste li {
+	line-height: 32px;
+	padding-left: 5px;
+}
+.musikk-liste li:hover, #konsert-liste tr:hover {
+	color: white;
+	background: linear-gradient(to bottom right,rgba(128,57,123,0.6),rgba(179,45,170,0.6));
+	border-radius: 3px;
+}
+.musikk-liste .glyphicon {
+	float: right;
+	font-size: 125%;
+}
+.musikk-liste .glyphicon:hover {
+	cursor: pointer;
+}
+.albumbilde {
+	width:100%;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+.bilde {
+	width:100%;
+	margin-top: 20px;
+}
+
+/* Tabell for lister med dato */
+.dato-liste tr.skjul {
+	display: none;
+}
+.dato-liste .glyphicon, #filter-siste .glyphicon {
+	color: white;
+	background: radial-gradient(#80397b,#b428aa);
+	border-radius: 3px;
+}
+.dato-liste .glyphicon {
+	font-size: 120%;
+	padding: 2px;
+}
+.dato-liste .ny-dato {
+	font-weight: bold;
+}
+.dato-liste > tbody > tr > td {
+	border: none;
+	padding: 3px;
+	vertical-align: middle;
+}
+
+/* Bilder/Ressurser */
+#forside-ressurs {
+	display: table;
+	margin: auto;
+}
+#forside-ressurs img {
+	width: 100%;
+}
+#liste-ressurser {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#liste-ressurser li {
+	margin: 5px;
+	padding: 10px;
+	display: table;
+	float: left;
+}
+#liste-ressurser li:hover {
+	color: white;
+	background: linear-gradient(to bottom right,rgba(128,57,123,0.6),rgba(179,45,170,0.6));
+	border-radius: 3px;
+}
+#liste-ressurser img {
+	max-width: 300px;
+}
+#liste-ressurser p {
+	text-align: center;
+}
+#bildearkiv {
+}
+.bildetekst {
+	font-style: italic;
+	margin: 5px 0 0 0;
+}
+#bildeModal .bildelenker {
+	float: left;
+}
+#bildeModal img {
+	width: 100%;
+}
+
+/* Blogg og nyheter */
+#liste-blogg article, #liste-nyheter article {
+	padding: 5px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#liste-blogg article:hover, #liste-nyheter article:hover {
+	background: linear-gradient(to bottom right,rgba(128,57,123,0.6),rgba(179,45,170,0.6));
+	border-radius: 3px;	
+}
+#liste-blogg article > a:hover, #liste-nyheter article > a:hover {
+	color: white;
+}
+#liste-blogg > article a, #liste-nyheter > article a {
+	/* Skru av link-styling */
+	color: initial;
+	text-decoration: none;
+	padding: 0px;
+}
+#liste-blogg img, #bloggModal img {
+	height: 55px;
+	margin-right: 15px;
+	float: left;
+	position: relative;
+	z-index: 2;
+}
+#liste-blogg .blogginfo {
+	font-weight: bold;
+}	
+#liste-blogg .blogginnlegg {
+	height: 20px;
+	margin-bottom: 0;
+	overflow: hidden;
+}	
+#fanblogg > #liste-blogg .blogginnlegg {
+	height: 40px;	/* Større plass på bloggsiden */
+}
+#fanblogg {
+	margin-top: 60px;
+}
+#liste-nyheter img {
+	height: 150px;
+	max-width: 200px;
+	position: relative;
+	z-index: 2;
+}
+#liste-nyheter article:nth-child(even) img,
+#nyhetsarkiv article:nth-child(even) img {
+	float: left;
+	margin-right: 15px;
+}
+#liste-nyheter article:nth-child(odd) img,
+#nyhetsarkiv article:nth-child(odd) img  {
+	float: right;
+	margin-left: 15px;
+}
+#liste-nyheter .nyhet {
+	height: 100px;
+	margin-bottom: 0;
+	overflow: hidden;
+}
+.lesmer-bg {
+    background: linear-gradient( to right, rgba(255,255,255,0.5), rgba(255,255,255,1));
+    position: relative;
+    top: -20px;
+	margin-bottom: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 1;
+}
+.lesmer {
+    background: white;
+	font-weight: bold;
+	color: #555;
+	border-radius: 3px;
+    float: right;
+	padding: 3px;
+	margin-top: -2px;
+	position: relative;
+    z-index: 1;
+}
+#nyhetsarkiv {
+	margin-top: 60px;
+}
+#nyhetsarkiv article {
+	margin-top: 40px;
+}
+#nyhetsarkiv img, #nyheterModal img {
+	max-height: 150px;
+}
+#nyhetsarkiv .nyhet {
+	min-height: 100px;
+}
+#nyheterModal img {
+	float: left;
+	margin-right: 15px;
+}	
+@media (min-width: 768px) {
+	#nyhetsarkiv img {
+		max-height: 300px;
+	}
+	#nyhetsarkiv .nyhet {
+		min-height: 250px;
+	}
+}
+/* Konserter */
+#konsertarkiv {
+	margin-top: 60px;
+}
+
+/* Butikk */
+#butikk-container {
+	margin-top: 60px;
+	padding-top: 5px;
+	display: table;
+}
+#butikk ul, #butikk-nav ul {
+	list-style-type: none;
+}
+#butikk-nav ul {
+	padding-left: 0;
+}
+#butikk-nav li {
+	display: inline;
+	float: left;
+	padding: 6px 12px;
+}
+#butikk-nav {
+	display: table;
+	margin: auto;
+}
+#butikk-nav .active {
+	font-weight: bold;
+	color: white;
+	background: linear-gradient(#80397b,#b32daa);
+}
+#butikk-nav li:hover {
+	color: white;
+	background: linear-gradient(to bottom right,rgba(128,57,123,0.6),rgba(179,45,170,0.6));
+}
+#butikk-klar-nav {
+	padding: 4px;
+	display: table;
+	margin: auto;
+	color: white;
+	background: linear-gradient(#b32daa,#80397b);
+}
+#butikk-klar-nav li:hover {
+	color: white;
+	background: linear-gradient(to bottom right,rgba(128,57,123,0.6),rgba(179,45,170,0.6));
+}
+#butikk-klar-nav label {
+	font-weight: normal;
+	padding: 3px 3px 3px 3px;
+	margin: 0px 10px 0px 0px;
+	cursor: pointer;
+}
+#butikk-klar-nav input {
+	cursor: pointer;
+}
+#butikk li {
+	margin: 20px 10px;
+	padding: 10px;
+	float: left;
+	display: none;
+}
+#butikk .vis {
+	display: table;
+}
+#butikk li:hover {
+	cursor: pointer;
+	border-radius: 5px;
+	background: linear-gradient(to bottom right,rgba(128,57,123,0.6),rgba(179,45,170,0.6));
+}
+#butikk .item  {
+	display: table;
+	margin: auto;
+	height: 180px;
+}
+#butikk .item-info {
+	max-width: 220px;
+}
+#butikk .price {
+	font-weight: bold;
+}
+#butikk .item-input > *  {
+	margin-right: 10px;
+}
+
+/* Om Jespen */
+#om {
+	margin-top: 60px;
+}
+#om article > p {
+	min-height: 150px;
+}
+#om article > p:nth-child(odd) img  {
+	float: right;
+	margin-left: 15px;
+}
+#om article > p:nth-child(even) img {
+	float: left;
+	margin-right: 15px;
+}
+#om img {
+	max-height: 150px;
+}
+#kontaktskjema {
+	margin-top: 40px;
+}
+#kontaktskjema .form-horizontal {
+	margin-top: 20px;
+}
+#kontaktskjema label {
+	padding-top: 0;
+}
